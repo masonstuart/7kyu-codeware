@@ -1,0 +1,11 @@
+String.prototype.toAlternatingCase = function () {
+  let newStr = '';
+  for (let i = 0; i < this.length; i++) { // Use 'this' to access the string
+    if (this[i] === this[i].toLowerCase()) {
+      newStr += this[i].toUpperCase();
+    } else {
+      newStr += this[i].toLowerCase();
+    }
+  }
+  return newStr;
+};
