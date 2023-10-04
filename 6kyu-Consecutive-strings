@@ -1,0 +1,16 @@
+function longestConsec(strarr, k) {
+    // Need a variable to keep track of the longest, concatenated string we've run into
+    let longest = ""
+    // Iterate over the array of strings
+    for (let i = 0; i <= strarr.length-k; i++){
+        // Concatenate `k` amount of elements together
+        let tempStr = strarr.slice(i, i+k).join("")
+        // Determine which concatenated string has the greatest length
+        // If there are multiple concatenated strings with the same max length, return the first instance
+        if (tempStr.length > longest.length){
+            longest = tempStr
+        }
+    }
+    // If n = 0 or k > n or k <= 0, return ""
+    return k > 0 ? longest : ""
+}
