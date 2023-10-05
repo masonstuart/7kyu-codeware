@@ -1,0 +1,13 @@
+function deleteNth(arr,n){
+let list = []
+for(let x of arr){
+//these two lines are doing most of the heavy lifting, checking to see is the number has occured n times
+  const num = list.filter(item => item === x).length
+  if(num === n){
+    continue
+  }else{
+    list.push(x)
+  }
+}
+  return list
+}
