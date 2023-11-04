@@ -1,0 +1,15 @@
+function isValidWalk(walk) {
+ let ns = 0
+ let we = 0
+ for(let dir of walk)
+   if(dir === 'n'){
+     ns++;
+   }else if(dir === 's'){
+     ns--;
+   }else if(dir === 'w'){
+     we++
+   }else if(dir === 'e'){
+     we--
+   }
+  return walk.length === 10 && ns === 0 && we === 0
+}
