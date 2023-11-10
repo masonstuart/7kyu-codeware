@@ -1,0 +1,14 @@
+function stringConverter(s) {
+    s = s.toLowerCase();  // Convert the string to lowercase to ignore capitalization
+    let result = '';
+
+    for (let char of s) {
+        if (s.split(char).length - 1 > 1) {
+            result += ')';
+        } else {
+            result += '(';
+        }
+    }
+
+    return result;
+}
