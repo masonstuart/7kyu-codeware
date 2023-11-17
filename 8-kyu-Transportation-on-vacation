@@ -1,0 +1,12 @@
+function rentalCarCost(d) {
+  let rate = 40
+  let total = 0
+  if(d>=7){
+    total = (d*rate)-50
+  }else if(d>=3){
+    total = (d*rate)-20
+  }else{
+    total = d*rate
+  }
+  return total
+}
